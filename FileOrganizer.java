@@ -7,10 +7,10 @@
  * @Student Number:T00611983
  * @ COMP 3411 Assignment 1
  * @Description: FileOrganizer will organize a record file named "student_record.txt" the file contains
- *               an integer and student name where each record is 36bytes. the record is organized from 
+ *               an integer and student name where each record is 36bytes. The record is organized from 
  *               descending order(the greater integer associated is moved up in the record list and the 
  *               lesser is moved down) this is done in a bubble sorting method where each record is checked
- *               and compared to the next record. if these records are in the wrong order they will be 
+ *               and compared to the next record. If these records are in the wrong order they will be 
  *               rearranged. (this is repeated until no changes are made)
  */
 import java.io.*;
@@ -42,7 +42,6 @@ public class FileOrganizer
        try 
        { 
             raf = new RandomAccessFile(inputFile, "rw"); 
-           // System.out.println(raf.length());
             String line = "1";
             String lastline = "1";
             int StudentNumber0 = 0;
@@ -51,7 +50,6 @@ public class FileOrganizer
             long locationOfCurrentLine = raf.getFilePointer();
             locationOfLastLine = raf.getFilePointer();
             locationOfLastLine = raf.getFilePointer();
-                //StudentNumber1 = parseLine(line); 
             lastline = raf.readLine();
             StudentNumber0 = parseLine(lastline);
             boolean switched = true;
